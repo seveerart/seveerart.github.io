@@ -2,6 +2,19 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: plantin, sans-serif;
+    src: url(https://use.typekit.net/ddg5ajp.css);
+}
+
 body {
     margin: 0;
+    font-family: plantin;
+}
+
+@media (max-width: 640px) {
+    body {
+      background-color: rgb(42);
+      margin: auto;
+    }
 }
