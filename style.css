@@ -1,61 +1,60 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: plantin, sans-serif;
-    src: url(https://use.typekit.net/ddg5ajp.css);
+  font-family: plantin, sans-serif;
+  src: url(https://use.typekit.net/ddg5ajp.css);
 }
 
 @font-face {
-    font-family: Avenir;
-    src: url(./Avenir/AvenirLTStd-Roman.otf);
+  font-family: Avenir;
+  src: url(./Avenir/AvenirLTStd-Roman.otf);
 }
 
 body {
-    margin: 0;
-    font-family: plantin;
+  margin: 0;
+  font-family: plantin;
 }
 
 @media (max-width: 640px) {
-    header {
-        width: 100%;
-        position: relative;
-        font-size: 36px;
-        font-family: plantin, sans-serif;
-        margin: auto;
-    }
+  header {
+    width: 100%;
+    position: relative;
+    font-size: 36px;
+    font-family: plantin, sans-serif;
+    margin: auto;
+  }
 
-    body {
-      width: 85%;  
-      margin: auto;
-      background-color: rgb(42, 42, 42);
-      font-family: Avenir, 'Helvetica Neue', sans-serif;
-    }
+  body {
+    width: 85%;
+    margin: auto;
+    background-color: rgb(42, 42, 42);
+    font-family: Avenir, "Helvetica Neue", sans-serif;
+  }
 
-    .landing-menu {
-        display: grid;
-        background-color: #88888888;
-        /* padding: 20px; */
-        width: 50vw;
-        height: 50vw;
-        border: 1px solid black;
-        margin: auto auto 50px auto;
-      }
+  .landing-menu {
+    display: grid;
+    background-color: #88888888;
+    /* padding: 20px; */
+    width: 50vw;
+    height: 50vw;
+    border: 1px solid black;
+    margin: auto auto 50px auto;
+  }
 
-    .landing-menu a {
-        color: #e5e5e5;
-        text-decoration: none;
-        border: 1px solid brown;
-        width: 100%;
-        height: 100%;
-        margin: auto;
-        padding: 40%;
-        
-    }
+  .landing-menu a {
+    color: #e5e5e5;
+    text-decoration: none;
+    border: 1px solid brown;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 40%;
+  }
 
-/* BORGER NAV */
-/* Basic Styles */
+  /* BORGER NAV */
+  /* Basic Styles */
   a {
     text-decoration: none;
   }
@@ -74,11 +73,12 @@ body {
   #toggle {
     display: none;
   }
-  
+
   /* Styles for the 'open' state, if the checkbox is checked */
-  #toggle:checked ~ .toggle-container .button-toggle {
-    /* Any element you need to change the style if menu is open goes here, using the sibling selector (~) */
-    box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+  /* Any element you need to change the style if menu is open goes here, using the sibling selector (~) */
+ #toggle:checked ~ .toggle-container .button-toggle {
+    box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1),
+      inset 0 0 0 20px rgba(0, 0, 0, 0.1);
   }
   #toggle:checked ~ .toggle-container .button-toggle:before {
     transform: translateY(-50%) rotate(45deg) scale(1);
@@ -97,7 +97,7 @@ body {
   /* Restoring nav items from 'lines' in the menu icon */
   #toggle:checked ~ .nav .nav-item {
     color: whitesmoke;
-    border: 1px dashed yellow;
+    /* border: 1px dashed yellow; */
     letter-spacing: 0;
     height: 40px;
     line-height: 40px;
@@ -111,39 +111,39 @@ body {
   #toggle:checked ~ .nav .nav-item:nth-child(1) {
     transition-delay: 0.15s;
   }
-    #toggle:checked ~ .nav .nav-item:nth-child(1):before {
-        transition-delay: 0.15s;
-    }
-    #toggle:checked ~ .nav .nav-item:nth-child(2) {
-        transition-delay: 0.1s;
-    }
-    #toggle:checked ~ .nav .nav-item:nth-child(2):before {
-        transition-delay: 0.1s;
-    }
-    #toggle:checked ~ .nav .nav-item:nth-child(3) {
-        transition-delay: 0.05s;
-    }
-    #toggle:checked ~ .nav .nav-item:nth-child(3):before {
-        transition-delay: 0.05s;
-    }
-    #toggle:checked ~ .nav .nav-item:nth-child(4) {
-        transition-delay: 0s;
-    }
-    #toggle:checked ~ .nav .nav-item:nth-child(4):before {
-        transition-delay: 0s;
-    }
+  #toggle:checked ~ .nav .nav-item:nth-child(1):before {
+    transition-delay: 0.15s;
+  }
+  #toggle:checked ~ .nav .nav-item:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+  #toggle:checked ~ .nav .nav-item:nth-child(2):before {
+    transition-delay: 0.1s;
+  }
+  #toggle:checked ~ .nav .nav-item:nth-child(3) {
+    transition-delay: 0.05s;
+  }
+  #toggle:checked ~ .nav .nav-item:nth-child(3):before {
+    transition-delay: 0.05s;
+  }
+  #toggle:checked ~ .nav .nav-item:nth-child(4) {
+    transition-delay: 0s;
+  }
+  #toggle:checked ~ .nav .nav-item:nth-child(4):before {
+    transition-delay: 0s;
+  }
 
   /* Hide the lines */
   #toggle:checked ~ .nav .nav-item:before {
     opacity: 0;
   }
-    #toggle:checked ~ header main {
-        padding-top: 30px;
-    }
-    #toggle:checked ~ header main:before {
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-  
+  #toggle:checked ~ header main {
+    padding-top: 30px;
+  }
+  #toggle:checked ~ header main:before {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
   /* Toggle Button */
   .button-toggle {
     position: absolute;
@@ -159,13 +159,15 @@ body {
     transition: 0.6s;
   }
   /*  Shadow on Hover */
-  .button-toggle:hover {
-    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
-  }
+  /* .button-toggle:hover {
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1),
+      inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+  } */
 
   /* Making the 'X' icon using `:before` and `:after` pseudo-elements */
   /* Initially hidden beause of `scale(0)` transformation */
-  .button-toggle:before, .button-toggle:after {
+  .button-toggle:before,
+  .button-toggle:after {
     position: absolute;
     content: "";
     top: 50%;
@@ -182,7 +184,7 @@ body {
   .button-toggle:after {
     transform: translateY(50%) rotate(-45deg) scale(0);
   }
-  
+
   /* Menu */
   .nav {
     display: inline-block;
@@ -214,27 +216,27 @@ body {
   .nav-item:nth-child(1) {
     transition-delay: 0s;
   }
-    .nav-item:nth-child(1):before {
-        transition-delay: 0s;
-    }
-    .nav-item:nth-child(2) {
-        transition-delay: 0.05s;
-    }
-    .nav-item:nth-child(2):before {
-        transition-delay: 0.05s;
-    }
-    .nav-item:nth-child(3) {
-        transition-delay: 0.1s;
-    }
-    .nav-item:nth-child(3):before {
-        transition-delay: 0.1s;
-    }
-    .nav-item:nth-child(4) {
-        transition-delay: 0.15s;
-    }
-    .nav-item:nth-child(4):before {
-        transition-delay: 0.15s;
-    }
+  .nav-item:nth-child(1):before {
+    transition-delay: 0s;
+  }
+  .nav-item:nth-child(2) {
+    transition-delay: 0.05s;
+  }
+  .nav-item:nth-child(2):before {
+    transition-delay: 0.05s;
+  }
+  .nav-item:nth-child(3) {
+    transition-delay: 0.1s;
+  }
+  .nav-item:nth-child(3):before {
+    transition-delay: 0.1s;
+  }
+  .nav-item:nth-child(4) {
+    transition-delay: 0.15s;
+  }
+  .nav-item:nth-child(4):before {
+    transition-delay: 0.15s;
+  }
 
   /* Adjusting width for first line */
   .nav-item:nth-child(1) {
@@ -247,7 +249,7 @@ body {
   }
 
   /* Adjusting the fourth element onwards */
-  .nav-item:nth-child(n+4) {
+  .nav-item:nth-child(n + 4) {
     letter-spacing: -8px;
     margin-top: -7px;
     opacity: 0;
@@ -266,11 +268,4 @@ body {
     transform: translateY(-50%) scaleY(5);
     transition: 0.5s;
   }
-  
-
-
-
-
-
-
 }
