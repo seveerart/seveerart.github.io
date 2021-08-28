@@ -6,39 +6,43 @@
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="script.js"> -->
     <link rel="stylesheet" href="https://use.typekit.net/ddg5ajp.css">
+    <!-- <link rel="stylesheet" href="mobilenav.css"> -->
     <title>S E V E E R</title>
 </head>
 <body>
-    <div class="container">
-        <input id="toggle" type="checkbox">
-        
-        <label class="toggle-container" for="toggle">
-          <span class="button button-toggle"></span>
-        </label>
-    
-        <!-- The Nav Menu -->
-        <nav class="nav">
-          <a class="nav-item" href="/index.html">Home</a>
-          <a class="nav-item" href="/design.html">Design</a>
-          <a class="nav-item" href="/illustration.html">Illustration</a>
-          <a class="nav-item" href="/contact.html">Contact</a>
-        </nav>
-    </div>
-    
-        <header>
-            <h1>Seveer Art</h1>
-        </header>
 
+  <header>
+     <!-- (A) MENU WRAPPER -->
+     <nav id="hamnav">
+        <!-- (B) THE HAMBURGER -->
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
+        <!-- (C) MENU ITEMS -->
+        <div id="hamitems">
+          <a href="/index.html">Home</a>
+          <a href="/design.html">Design</a>
+          <a href="/illustration.html">Illustration</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </nav>
+
+
+    <h1>Seveer Art</h1>
+  </header>
+        <!-- <ul class="landing-menu">
+          <a href="/design.html">
+            <li>Design</li>
+          </a>
+
+          <a href="/illustration.html">
+            <li>Illustration</li>
+          </a>
+        </ul> -->
         <div class="landing-menu">
             <a href="/design.html">Design</a>
         </div>
         <div class="landing-menu">
             <a href="/illustration.html">Illustration</a>
         </div>
-        <!-- <a href="/design.html">
-            <div class="landing-menu">
-                Design
-            </div>
-        </a> -->
     </body>
 </html>
