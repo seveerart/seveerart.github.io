@@ -16,27 +16,44 @@ body {
   margin: 0;
   font-family: plantin;
 }
+@media (min-width: 640px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }  
+}
 
 @media (max-width: 640px) {
   header {
     display: block;
     width: 100%;
     position: relative;
-    /* font-size: 36px;
-    font-family: plantin, sans-serif; */
-    margin: auto;
+    margin: 20px auto;
   }
 
   h1 {
+    display: inline-flex;
     width: 70%;
     position: inline-block;
     font-size: 48px;
     font-family: plantin, sans-serif;
     margin: 10px auto 30px auto;
     text-align: center;
+    z-index: 1;
   }
-
-
 
   h2 {
     width: 50%;
@@ -45,7 +62,12 @@ body {
     font-family: plantin, sans-serif;
     margin: 0;
     float: right;
-    border: 1px dashed green;
+    /* border: 1px dashed green; */
+  }
+
+  .column {
+    flex: 100%;
+    max-width: 100%;
   }
 
   body {
@@ -56,15 +78,13 @@ body {
   }
 
   .landing-menu {
-    display: grid;
+    display: inline-flex;
     background-color: #88888888;
-    /* padding: 20px; */
     width: 50vw;
     height: 50vw;
     grid-template-columns: 50vw;
     grid-template-rows: 50vw 50vw;
     grid-row: 1 / 2;
-    /* border: 1px solid black; */
     margin: auto auto 50px auto;
   }
 
@@ -78,42 +98,51 @@ body {
     padding: 40% 0;
     text-align: center;
   }
-  
-}
 
-
-/* [ON SMALL SCREENS] */
-@media screen and (max-width: 768px){
-  /* (A) BREAK INTO VERTICAL MENU */
-  #hamitems a {
-    display: block;
-    width: 75%;
-    border-top: 1px solid #333;
-    text-align: right;
-    text-decoration: none;
-    font-size: 18px;
-    color: rgba(161, 161, 161, 0.945);
-    line-height: 24px;
-    text-transform: uppercase;
-    
-  }
-
-  /* (B) SHOW HAMBURGER ICON */
-  #hamnav label {
-    display: inline-block;
+  /* Style The Dropdown Button */
+  .dropbtn {
+    background-color: #470000;
     color: white;
-    background: #a02620;
-    font-style: normal;
-    font-size: 1.5em;
-    padding: 10px;
-    /* float: right; */
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
   }
 
-  /* (C) TOGGLE SHOW/HIDE MENU */
-  #hamitems { display: none; }
-  #hamnav input:checked ~ #hamitems { display: block; }
-
-  input {
-    visibility: hidden;
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
   }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #b8b2b2;
+}
 }
